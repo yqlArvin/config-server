@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>2020.0.0-M6</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR5</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -25,18 +25,31 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- spring cloud config 服务端包 -->
+        <!--Spring Cloud Config 服务端依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-
-        <!--eureka client 客户端包-->
+        <!--SVN-->
+        <dependency>
+            <groupId>org.tmatesoft.svnkit</groupId>
+            <artifactId>svnkit</artifactId>
+        </dependency>
+        <!--Spring Boot Actuator，感应服务端变化-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--Spring Security依赖-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-security</artifactId>-->
+        <!--</dependency>-->
+        <!-- Spring Cloud Eureka的依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

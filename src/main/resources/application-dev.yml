@@ -1,3 +1,4 @@
+#  https://github.com/hellxz/SpringCloudLearn
 spring:
   application:
     name: config-server  # 应用名称
@@ -5,8 +6,13 @@ spring:
     config:
       #config服务端参数
       server:
-        native:
-          search-locations: /server-config-files # 不指定路径的话，默认搜索 resources 目录
+        #        health:
+        #          repositories:
+        #            myservice:
+        #              label: mylabel
+        #            myservice-dev:
+        #              name: myservice
+        #              profiles: development
         git:
           uri: https://github.com/yqlArvin/config-server #配置文件所在仓库
           username: yqlArvin #登录账号
