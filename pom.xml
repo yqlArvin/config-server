@@ -11,7 +11,7 @@
     <groupId>com</groupId>
     <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>config</name>
+    <name>configClient</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -20,35 +20,34 @@
     </properties>
 
     <dependencies>
+        <!--Spring Cloud Config 客户端依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!-- web的依赖，必须加 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--Spring Cloud Config 服务端依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-        <!--SVN-->
-        <dependency>
-            <groupId>org.tmatesoft.svnkit</groupId>
-            <artifactId>svnkit</artifactId>
         </dependency>
         <!--Spring Boot Actuator，感应服务端变化-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--Spring Security依赖-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-security</artifactId>-->
-        <!--</dependency>-->
         <!-- Spring Cloud Eureka的依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!-- 连接配置中心重试的依赖 -->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
         <dependency>
